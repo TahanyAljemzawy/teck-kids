@@ -11,6 +11,15 @@ const JS_Schema = new mongoose.Schema ({
     Desceriptions: {
         type: String,   
     },
+    userSchema:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+          ref:"User"
+      }
+    ]
 });
 
-export default mongoose.model('js',JS_Schema);
+const js =  mongoose.model('js',JS_Schema);
+
+
+module.exports = js;

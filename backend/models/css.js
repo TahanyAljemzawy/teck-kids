@@ -12,6 +12,12 @@ const CSS_Schema = new mongoose.Schema ({
     Desceriptions: {
         type: String,     
     },
+    userSchema:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+          ref:"User"
+      }
+    ]
 });
 
 export default mongoose.model('css',CSS_Schema );

@@ -12,6 +12,12 @@ const HTML_Schema = new mongoose.Schema ({
         type: String,
         
     },
+    userSchema:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+          ref:"User"
+      }
+    ],
 });
 
 module.exports = mongoose.model('Html',HTML_Schema );
