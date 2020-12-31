@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./des.css"
 import { Button, Card  } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
-import Payment from '../payment';
-
+import StripeCheckout from "react-stripe-checkout";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 /**************************************************** */
 
 export default function CSSdes() {
  const history = useHistory();
+
+ const [product] = useState({
+   name   : 'Teck-kid',
+   price  : 100, 
+   description : 'CSS course'
+ })
 
   const routeChange = async() =>{ 
     //I need to check if the user logged in if not send him to the login page
@@ -35,8 +42,23 @@ export default function CSSdes() {
     }   
     }
   }
-
-
+  toast.configure();
+  async function handleToken(token) {
+    console.log(token , product);
+    /*
+    const response = await axios.post(
+      "http://localhost:8000/payments/charge",
+      { token, product }
+    );
+    console.log(token , product);
+    const { status } = response.data;
+    console.log("Response:", response.data);
+    if (status === "success") {
+      toast("Success! Check email for details", { type: "success" });
+    } else {
+      toast("Something went wrong", { type: "error" });
+    }*/
+  }
 
   return (
   <div style={{marginLeft : "500px"}}>
@@ -50,7 +72,13 @@ export default function CSSdes() {
     </Card.Text>
     
     <Button className="hh7"  onClick={routeChange} >Register Now</Button>
-    <Payment />
+    <StripeCheckout
+        stripeKey="pk_test_51I3lU8JcY9KJTdicuwdaAS2Y1sePa698fW7C5peecuSzWbgOov34REXHvoedFBVISFqGyYSCakwBhGyQYndgOBWI00SzCaAuQm"
+        token={handleToken}
+        amount={product.price * 100}
+        name={product.name}
+        
+      />
     </Card.Body>
   </Card>
   </div> 
