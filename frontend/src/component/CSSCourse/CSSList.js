@@ -24,7 +24,7 @@ function CSSList() {
     console.log(lesson)
      
     } catch (error) {
-      alert(error)
+      console.log(error)
     }
   };
 

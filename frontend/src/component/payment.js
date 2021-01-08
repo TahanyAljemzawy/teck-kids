@@ -42,7 +42,7 @@ function Payment(info) {
               } 
         
         } catch (error) {
-        alert(error)
+        console.log(error)
         } 
     }
 

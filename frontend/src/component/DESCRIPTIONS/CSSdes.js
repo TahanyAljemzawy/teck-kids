@@ -35,7 +35,7 @@ export default function CSSdes() {
     await axios.put("http://localhost:8000/course/addCourse/"+userId, newCourse);
     history.push('/account/'+userId)
     } catch (error) {
-    alert(error.response.data.msg)
+      console.log(error.response.data.msg)
     }   
     }
   }

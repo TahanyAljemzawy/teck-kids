@@ -23,8 +23,8 @@ export default class Quiz extends Component {
                 3: 'Control Style Sheets'
             },
             2: {
-                1: 'At the top of the document',
-                2: 'In the section',
+                1: 'In the <body> section',
+                2: 'In the <head> section',
                 3: 'At the end of the document'
             },
             3: {

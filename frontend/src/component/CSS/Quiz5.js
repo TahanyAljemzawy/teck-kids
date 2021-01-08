@@ -13,7 +13,7 @@ export default class Quiz extends Component {
     state = {
         quiestions: {
             1: 'How would you set a background image with CSS?',
-            2: 'What is the difference between margins and padding?',
+            2: 'Which is the correct CSS syntax?',
             3: 'What is the proper format of an CSS comment?'
         },
         answers: {
@@ -23,9 +23,9 @@ export default class Quiz extends Component {
                 3: 'background-url:'
             },
             2: {
-                1: 'Margin is the outer space of an element, while padding is the inner space of an element.',
-                2: 'padding adds whitespace and margins increase the border size',
-                3: ' margins add whitespace and padding increases the border size'
+                1: 'body{ color: black;}',
+                2:  '{body: color= black;}',
+                3: 'body=black;'
             },
             3: {
                 1: ' <!-- -->',

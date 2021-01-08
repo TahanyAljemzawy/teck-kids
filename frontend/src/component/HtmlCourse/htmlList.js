@@ -24,7 +24,8 @@ function HtmlList() {
      console.log(lesson)
      
     } catch (error) {
-      alert(error)
+      console.log(error)
+
     }
   };
 
