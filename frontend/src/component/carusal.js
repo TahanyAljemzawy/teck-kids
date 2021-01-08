@@ -21,8 +21,8 @@ import './carusal.css'
           <div class="hello">
             <h3 >Console.log(hello World) </h3>
             </div>
-            <span class="span1">L</span><span class="span1">O</span><span  class="span1">V</span><span  class="span1">E</span><span  class="span1">Y</span><span  class="span1">O</span><span  class="span1">U</span  ><span class="span1">R</span><span class="span1">S</span><span class="span1">E</span><span class="span1">L</span><span class="span1">&nbsp;</span><span class="span1">F</span><span class="span1">W</span><span class="span1">H</span><span class="span1">O</span><span class="span1">L</span><span class="span1">E</span>
-           <span class="span1">S</span><span  class="span1">E</span><span class="span1">L</span><span  class="span1">&nbsp;</span><span  class="span1">F</span>
+            <span className="span1">L</span><span class="span1">O</span><span  className="span1">V</span><span  className="span1">E</span><span  className="span1">Y</span><span  className="span1">O</span><span  class="span1">U</span  ><span className="span1">R</span><span className="span1">S</span><span className="span1">E</span><span className="span1">L</span><span className="span1">&nbsp;</span><span className="span1">F</span><span className="span1">W</span><span className="span1">H</span><span class="span1">O</span><span class="span1">L</span><span class="span1">E</span>
+           <span className="span1">S</span><span  class="span1">E</span><span class="span1">L</span><span  class="span1">&nbsp;</span><span  class="span1">F</span>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
