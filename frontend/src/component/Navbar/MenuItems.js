@@ -16,10 +16,11 @@ export const MenuItems = [
   cName:'nav-links1'
 },
 {
-  title : 'Our Story',
-  url:'/ourstory',
+  title : 'Chat Rooms',
+  url:'/Join',
   cName:'nav-links1'
 },
+
 // {
 //   title : 'Sign Up',
 //   url:'/registrate',

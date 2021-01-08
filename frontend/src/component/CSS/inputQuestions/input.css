@@ -1,0 +1,50 @@
+#hoho{
+    
+  
+    margin-left: 150px;
+   font-size: 18px;
+   font-family: cursive;
+ 
+}
+
+/* #apples{
+border-style: solid;
+} */
+
+/* #text{
+    border-style: solid;
+    
+} */
+#textt{
+
+    border-style: solid;
+    /* text-align: center; */
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 70px;
+    background-color: rgb(24, 17, 17);
+
+
+
+    
+    
+}
+    
+    #applesB{
+        margin-left: 150px;
+        margin-top: 100px;
+
+    }
+
+    #idid{
+        /* border-style: solid; */
+        font-family: cursive;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 30px;
+        font-size: 28px;
+      font-weight: 400;
+      margin-top: 10px;
+      box-shadow: 5px 10px 10px #888888 ,
+      10px 20px 20px #888888;
+       }

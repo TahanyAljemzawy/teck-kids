@@ -14,10 +14,10 @@
 }
 
 .nav-menu {
-  background-image: url('https://i.pinimg.com/564x/17/23/e3/1723e3561b5518f441da89c72d16d2e2.jpg');
+  background-image: url('https://media2.giphy.com/media/2wgW46ZPIX9LxyBYRD/source.gif');
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-color: #141c66;
+  background-color: #000108;
   background-position: center bottom;
   background-size: 500px 600px;
   width: 250px;
@@ -42,7 +42,8 @@
   align-items: center;
   padding: 8px 8px 8px 16px;
   list-style: none;
-  height: 60px;
+  height: 100px;
+  margin-left: 100px;
 }
 
 .nav-text a {
@@ -59,14 +60,14 @@
 
 .nav-text a:hover {
   padding: 0.5rem;
-  border-left: 15px solid rgba(188, 191, 214) ;
+  border-left: 15px solid rgb(231, 191, 12) ;
   transition: 0.8s;
-  background: rgba(143, 143, 216, 0.45) ;
+  background: rgba(231, 135, 9, 0.45) ;
   
 }
 
 .nav-menu-items {
-  width: 100%;
+  width: 90%;
 }
 
 .navbar-toggle {
@@ -78,15 +79,19 @@
   align-items: center;
 }
 
-span {
-    margin-left: 16px;
-    font-size: 18px;
+.text {
+    margin-left:-120px;
+    font-size: 20px;
+    font-family: cursive;
+    width: 500px;
 }
 
 .courseBox {
-  margin-top: 2rem;
-  margin-left: 500px;
+  margin-top: 1px;
+
+  margin-left: 400px;
   font-size: 18px;
+  width: 700px;
 
 }
 .courseBox > h1 {
@@ -94,3 +99,22 @@ span {
 color:  rgb(0, 0, 0) ;
 }
 
+.animimage {
+  z-index: -1;
+      width: 600px;
+    height: 600px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: 100;
+
+  }
+  
+  @keyframes example {
+    0%   { left:9px; top:0px;}
+    25%  { left:200px; top:0px;}
+    /* 50%  { left:200px; top:200px;} */
+    /* 75%  { left:0px; top:200px;} */
+    100% { left:0px; top:0px;}
+  }

@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import axios from "axios";
 import "antd/dist/antd.css";
 
-// import { storage } from "./firebase.js";
-// import Footer from './Footer';
-// import Navbar_login from "./Navbar_Login"
-
-//
-
-
-
 export default class EditProfile extends Component {
     constructor(props) {
       super(props);
@@ -91,7 +83,7 @@ export default class EditProfile extends Component {
             }}>
 
         <br />
-        <div className = "container text-center">
+        <div  className="col-md-offset-5 col-md-5" >
         <form className="text-center border border-light p-9" onSubmit={this.onSubmit}>
             <h3 className = "mb-3">
             Edit user Profile 

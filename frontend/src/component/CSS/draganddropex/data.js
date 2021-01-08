@@ -6,23 +6,13 @@ import DragNDrop from './DragNDrop'
 var data = [
     {title: 'Drag',
      items: 
-     [ 'p {',
-      ' color: red;', 'text-align: center;','}'
+     [  'text-align: center;','}',
+      ' color: red;','p {',
       ]
     },
     {title: 'Drop here', items:  [ ]}
   ]
-
- var rightData = [
-  {title: 'Drag',
-   items: 
-   [ ]
-  },
-  {title: 'Drop here', items:  [ 'p {',
-  ' color: red;', 'text-align: center;','}']}
-]
   
-console.log(rightData);
 function Data() {
   
   // var locals =  localStorage.getItem('List')
@@ -31,7 +21,7 @@ function Data() {
   return (
     <div className="defaultData"> 
       <header className="defaultData-header"> 
-      <DragNDrop data = {data} rightData={rightData}/>
+      <DragNDrop data = {data}/>
       </header>
     </div>
   )

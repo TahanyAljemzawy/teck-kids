@@ -1,5 +1,5 @@
 import React from 'react'
-import './vv.css';
+import './momo.css';
 
 import DragNDrop from './DragNDrop'
 
@@ -7,7 +7,7 @@ import DragNDrop from './DragNDrop'
 const data = [
   {title: 'Drag',
   items: 
-  [ '<!DOCTYPE html>', '</html>', '<p>My paragraph.</p>','<body>', '<h1>My Heading</h1>','</body>','<html>'
+  [  '</html>', '<p>My paragraph.</p>','<body>', '<h1>My Heading</h1>','</body>','<!DOCTYPE html>','<html>'
    ]
     },
     {title: 'Drop here', items:  [ ]}
@@ -18,8 +18,8 @@ const data = [
    items: 
    [ ]
   },
-  {title: 'Drop here', items:  ['<!DOCTYPE html>',
-  '<html>', '<body>','<h1>My Heading</h1>', '<p>My paragraph.</p>','</body>', '</html>']}
+  {title: 'Drop here', items:  [
+  '<html>', '<body>','<h1>My Heading</h1>', '<p>My paragraph.</p>','</body>','<!DOCTYPE html>', '</html>']}
 ]
   
 function Data() {

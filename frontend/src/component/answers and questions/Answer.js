@@ -5,6 +5,7 @@ const Answer = (props) => {
     let answers = Object.keys(props.answer)
         .map((qAnswer, i) => (
             <li
+           
             className=
             {
                 props.correctAnswer === qAnswer ?
@@ -23,7 +24,7 @@ const Answer = (props) => {
                 <ul disabled={props.clickedAnswer ? true : false} className="Answers">
                     {answers}
                 </ul>
-                <div>
+                <div  style={{marginLeft:"450px"}}>
                     {
                         props.correctAnswer ?
                         'Correct Answer!' : 

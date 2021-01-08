@@ -10,11 +10,11 @@ const data = [
      items: 
      [ '<h1>','<p>', '<h3>']
     },
-    {title: 'End Tags', items:  ['</p>', '</h1>',  '<h3>']},
-    {title: 'Drop here', items:  ['' ]},
-    {title: 'Drop here', items:  [ 7,8]},
-    {title: 'Drop here', items:  [9,10 ]},
-    {title: 'Drop here', items:  [11,12 ]}
+    {title: 'End Tags', items:  ['</p>', '</h1>',  '<h3>'] },
+    // {title: 'Drop here', items:  ['' ]},
+    // {title: 'Drop here', items:  [ 7,8]},
+    // {title: 'Drop here', items:  [9,10 ]},
+    // {title: 'Drop here', items:  [11,12 ]}
 
   ]
 

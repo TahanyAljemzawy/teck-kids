@@ -1,15 +1,40 @@
+
+  
+.Content{
+
+    margin-left: 100px;
+    height: 300px;
+    margin-top:50px;
+    /* background-image: url("https://spaceplace.nasa.gov/meteor-shower/en/meteor-shower.en.gif"); */
+    background-repeat: no-repeat;
+   
+}
+
 .Answers{
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-left: 80px;
+    font-family: Cursive	;
+
+
+   
 }
 .Answers li{
     padding: 10px;
+    width: 600px;
     border-left: 4px solid #080600;
     background-color:#eea29a;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     margin: 0 0 5px;
-    margin-left: 300px;
+    margin-left: 170px;
     margin-right: 300px;
+    margin-top: 15px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 10px #888888 ,
+                 10px 20px 20px #888888;
 }
 .Answers li:hover{
     cursor: pointer;
@@ -40,18 +65,21 @@
 }
 .Content h1{
     /* margin: 15px ; */
-    margin-left: 300px;
+    background-image: url( "https://spaceplace.nasa.gov/meteor-shower/en/meteor-shower.en.gif" );
+    padding-top: 80px;
+    margin-left: 250px;
     margin-right: 300px;
-
-    margin-top: 100px;
-    font-size: 30px;
+     width: 600px;
+     height: 150px;
+    margin-top: 50px;
+    font-size: 20px;
     font-style: italic;
-    font-family: Arial,sans-serif;
+    font-family: Cursive	;
     font-weight: bolder;
-    color: #0a0a0a;
+    color: white;
     text-transform: none;
     text-shadow: none;
-    text-align: left;
+    text-align: center;
     border-style: solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;

@@ -4,16 +4,12 @@ const router = require("express").Router();
 const User = require('../models/User');
 //for hashing the password...........
 const bcrypt = require('bcrypt');
-
-
 // use joi to validate the data inputs from user.............. 
 const Joi = require('@hapi/joi');
 //for the token
 const JWT = require('jsonwebtoken');
 const auth = require("./middleware");
-
 //the validation schema using joi :)
-
 const querySchema = Joi.object({
   userName     : Joi.string().required(),
   age          : Joi.string().required(),
@@ -22,7 +18,6 @@ const querySchema = Joi.object({
   password     : Joi.string().min(8).required(),
   passwordAgain: Joi.ref('password'),//to equal password
 })
-
 //we add async here cause we need sometime to submit the data here
 router.post("/register", async (req, res) => {
   //what I need to cheeck for the user registration:
@@ -111,8 +106,3 @@ router.post("/register", async (req, res) => {
     //   res.json(user);
     // });
 module.exports = router;
-
-//////////////////////
-
-
-

@@ -9,6 +9,8 @@ import HtmlCard from '../CourseCards/HtmlCard';
 import CssCard from '../CourseCards/CssCard';
 import { Card } from 'antd';
 import { Button} from 'react-bootstrap';
+const queryString = require('query-string');
+
 
 /************************************************** */
 
@@ -57,7 +59,7 @@ class Personalprofile extends React.Component {
        try{//bring info of the user 
         await axios.get("http://localhost:8000/user/account/" + this.state.id)
             .then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 console.log("id of teacher",this.state.id)
                 this.setState({ 
                     name: res.data.userName,
@@ -98,35 +100,38 @@ class Personalprofile extends React.Component {
             var x = <HtmlCard />
         }
         if(this.state.cssCourse){
-            var y = <CssCard />
+            var y = <div style={{marginLeft:"700px" , marginTop:"-300px" }} ><CssCard /></div>
         }
       
         return (
-            <div>
+            
+            <div style={{marginLeft:"600px"}}>
                 <span> {this.state.role==="teacher"? "hello teacher" : "helllo student" }</span>
                 
             <div 
             style={{
-                position: 'absolute', right: '0%', top: '55%',
-                transform: 'translate(-50%, -50%)',
-                border:'2px solid pink',
-                height:'500px',
-                padding:'20px'
+                // position: 'absolute', right: '0%', top: '55%',
+                // transform: 'translate(-50%, -50%)',
+                // border:'2px solid pink',
+                // height:'500px',
+                // padding:'20px',
             }}>
+            <div style={{marginLeft:"-550px",float:"left"}}>
                 
-                <Avatar size={200} icon={<UserOutlined />} src={this.state.img} />
-                <h2>My Profile</h2>
+                <Avatar  size={200} icon={<UserOutlined />} src={this.state.img} /><br/>
+                <ProfilePicChanger handelImageChange={this.handelImageChange} /><br />
+
+                <h2 style={{  fontFamily:"Cursive"}}>My Profile</h2>
                
-                <span>Name</span>
-                <h3>{this.state.name}</h3>
-                <span>Age</span>
-                <h3>{this.state.age}</h3>
-                
-                  <ProfilePicChanger handelImageChange={this.handelImageChange} />
                  <Link to ={"/edit/" + this.state.id}  className="btn btn-success" >Edit profile</Link>
-                {x}
+              
+              <br/>
+                <h3  style={{  fontFamily:"Cursive"}}>{this.state.name}</h3>
+                <span style={{  fontFamily:"Cursive"}}>Age</span>
+                <h3  style={{  fontFamily:"Cursive"}}>{this.state.age}</h3>
+                  {x}
                 {y}
-                
+     </div>
              </div>
              <br/>
              <label>{this.state.role==="teacher"? "to add a card that will help u to show your lessons" :  "learn a new lesson"} </label>
@@ -154,8 +159,9 @@ class Personalprofile extends React.Component {
                     })}
                  </ol>
              </div>
-           
+         
              </div>
+            
             
         )
     }

@@ -3,14 +3,17 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="blue" className="font-small pt-4 mt-4" style={{background:"black"}}>
+    <MDBFooter color="blue" className="font-small pt-4 mt-4" style={{backgroundImage: "url('https://i.pinimg.com/originals/ca/46/e1/ca46e126dfd4fcb68d8d3dfb349ab711.gif')"}}>
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="6">
+          <img src="assets/img/logo.png" alt="Baby House"/>
+
             <h5 className="title">Footer Content</h5>
+
             <span>
-              Here you can use rows and columns here to organize your footer
-              content.
+
+            “I’ve come to believe that each of us has a personal calling that’s as unique as a fingerprint – and that the best way to succeed is to discover what you love and then find a way to offer it to others in the form of service, working hard, and also allowing the energy of the universe to lead you. ”
             </span>
           </MDBCol>
           <MDBCol md="6">

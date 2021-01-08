@@ -10,7 +10,7 @@
 }
 
 
-img{
+.erorr444{
   display: block;
    margin-left: auto;
    margin-right: auto;
@@ -25,3 +25,10 @@ img{
   margin-right: 700px;
   float: right
  }
+.logIn{
+  background-color:#001433  ;
+  background-image:url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fmedia0.giphy.com%2Fmedia%2F57Y7JIqvH9okJCJYjp%2Fgiphy.gif");
+  margin: auto;
+  
+
+}

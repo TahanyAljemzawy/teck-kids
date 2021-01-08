@@ -1,6 +1,9 @@
 
 .NavbarItems1 {
-    background: linear-gradient(90deg, rgb(8, 8, 8) 0%, rgb(65, 59, 53) 100%);
+    /* background-image: url('https://media2.giphy.com/media/Mamp5FV1w8EsMFNuPS/giphy.gif');
+    background-color: black; */
+    background-image: url('https://i.pinimg.com/originals/ca/46/e1/ca46e126dfd4fcb68d8d3dfb349ab711.gif');
+    /* background-color: black; */
     height: 80px;
     display: flex;
     justify-content: center;
@@ -79,7 +82,7 @@
     }
 
     .nav-menu1.active {
-        background: #050505;
+        background-image: url('https://i.pinimg.com/originals/ca/46/e1/ca46e126dfd4fcb68d8d3dfb349ab711.gif');
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;

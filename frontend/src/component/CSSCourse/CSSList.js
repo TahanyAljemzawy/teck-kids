@@ -33,16 +33,16 @@ function CSSList() {
   }, []);
   
   return (
-    <div className='"row"'>
+    <div className="row" >
       
-        <div>
+        <div className="col">
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
             
           </Link>
         </div>
 
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+        <nav  className="col" className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' >
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars' onClick={showSidebar}>
@@ -53,20 +53,20 @@ function CSSList() {
               return (
 
 
-                <li key={index} className={item.cName} onClick={(event)=>{setId(event.currentTarget.dataset.id)}} data-id={item.id}  >
+                <li className="col" key={index} className={item.cName} onClick={(event)=>{setId(event.currentTarget.dataset.id)}} data-id={item.id}  >
                   <Link to={item.path} >
                     
-                    <span onClick={getLesson}>{item.title}</span>
+                    <span  className="col" className ='text' onClick={getLesson}>{item.title}</span>
                   </Link>
                 </li>
               );
             })}
           </ul>
         </nav>
-        <div className="courseBox">
-          <h1>{lesson.Titles}</h1>
-          <span>{lesson.Desceriptions}</span> 
-          <iframe title={lesson.Titles} width="600" height="400" src={lesson.Videos}frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <div className="courseBox" className="col">
+          <h1 className="text" style={{fontSize:"40px"}}>{lesson.Titles}</h1>
+          <div className="text">{lesson.Desceriptions}</div> 
+          <iframe title={lesson.Titles} style={{marginTop:"30px",marginLeft:"-160px"}} width="600" height="400" src={lesson.Videos}frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>  
                  
       

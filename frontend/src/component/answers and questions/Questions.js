@@ -1,9 +1,12 @@
 import React from 'react';
 // import './Questions';
+import './Answers.css';
+
 
 const Question = (props) => {
     return (
-        <h1>{props.question}</h1>
+        <div >
+        <h1 >{props.question}</h1></div>
     );
 }
 

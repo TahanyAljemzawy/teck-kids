@@ -12,10 +12,12 @@ export class NavBar extends Component {
     console.log('this is ',this.state.token)
       this.setState({ clicked: !this.state.clicked })
   }
-  logout() {
+   logout=()=> {
     window.localStorage.clear();
     window.location = "/";
   }
+  
+  
   render() {
     if(this.state.token){
       var logout = <li className="nav-links1" onClick={this.logout}>
