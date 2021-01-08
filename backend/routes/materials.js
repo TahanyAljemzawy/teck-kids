@@ -9,7 +9,7 @@ router.route('/lessons/:id').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
     });
 
-
+//this route is to add new lesson to hte course
 router.route('/add').post((req, res) => { //create?
      const material = req.body.material; 
       const description = req.body.description; 
@@ -26,7 +26,7 @@ router.route('/add').post((req, res) => { //create?
     }); 
       
   newMaterial.save()  
-  .then(() => res.json('Material added!'))  
+  .then(() => res.status(200).res.json('Material added!'))  
   .catch(err => res.status(400).json('Error: ' + err));
 });
 

@@ -2,8 +2,16 @@ import React, {Component} from 'react';
 import {storage} from './firebase'
 import axios from 'axios';
 import {Form , Button} from 'react-bootstrap'
+import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
+
+/************************************************** */
+toast.configure();//for the notification
 
 class Formlesson extends Component {
+  
+
+
   constructor(props) {
     super(props);
     this.onChangeMaterial = this.onChangeMaterial.bind(this);
@@ -93,17 +101,19 @@ class Formlesson extends Component {
       
     }
     console.log(task);
-    axios.post('http://localhost:8000/materials/add', task) //create?
-      .then(res => console.log(res.data));
-
-    // this.setState({
-    //   title: '',
-    //   material: '',
-    //   description: '',
-    //   video: ''
-    // });
+    const res = axios.post('http://localhost:8000/materials/add', task) //create?
+      res.then(res => console.log(res.data));
+      console.log(res.data);
+      /*
+      if (res.status === 200) 
+      toast("Success! New lesson is added ", { type: "success" });
+    else {
+        toast("Something went wrong :(", { type: "error" });
+      } 
+*/
+  
     console.log(task);
-    // window.location = '/teachersM'
+   
   }
 
 
@@ -145,6 +155,9 @@ class Formlesson extends Component {
               </Form.Group>
               <Button variant='primary' type='submit' onClick={this.onSubmit}>
                 Submit
+              </Button>
+              <Button variant='primary' type='submit' onClick={()=>{}}>
+                Back To profile
               </Button>
             </Form>
       </div>
