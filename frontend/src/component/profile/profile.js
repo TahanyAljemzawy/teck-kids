@@ -9,6 +9,7 @@ import HtmlCard from '../CourseCards/HtmlCard';
 import CssCard from '../CourseCards/CssCard';
 import { Card } from 'antd';
 import { Button} from 'react-bootstrap';
+import flower from '../pices/flower.jpg';
 const queryString = require('query-string');
 
 
@@ -69,9 +70,9 @@ class Personalprofile extends React.Component {
                     cssCourse:res.data.cssCourse,
                     jsCourse:res.data.jsCourse,
                     courses:res.data.Courses
-
                  })
                  console.log("this is courses of this teacher",this.state.courses)
+
                  
             })
            var data = this.state.courses
@@ -81,7 +82,8 @@ class Personalprofile extends React.Component {
             data.map((courseId) => (
              axios.get("http://localhost:8000/teacher/card/"+courseId)//return the information of the courses the user teach
                 .then(res=>{ 
-                    this.setState({course:res.data})
+                this.setState({course:res.data})
+                console.log(this.state.course)
                  myCourses.push(res.data)
                 this.setState({array:myCourses})
                 })
@@ -104,18 +106,19 @@ class Personalprofile extends React.Component {
         }
       
         return (
-            
+            <div  style={{
+                backgroundImage: "url(" + flower + ")",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'}}>
+
             <div style={{marginLeft:"600px"}}>
+              
+            
                 <span> {this.state.role==="teacher"? "hello teacher" : "helllo student" }</span>
                 
-            <div 
-            style={{
-                // position: 'absolute', right: '0%', top: '55%',
-                // transform: 'translate(-50%, -50%)',
-                // border:'2px solid pink',
-                // height:'500px',
-                // padding:'20px',
-            }}>
+            <div>
+            
             <div style={{marginLeft:"-550px",float:"left"}}>
                 
                 <Avatar  size={200} icon={<UserOutlined />} src={this.state.img} /><br/>
@@ -161,7 +164,7 @@ class Personalprofile extends React.Component {
              </div>
          
              </div>
-            
+            </div>
             
         )
     }

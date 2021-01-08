@@ -18,6 +18,7 @@ export default function CardDisplay() {
   const history = useHistory();
 
   var userId = localStorage.getItem("id");
+  // var role = localStorage.getItem('role');
 
   const [product, setProduct] = useState({});
   const [data, setData] = useState([]);
@@ -87,14 +88,20 @@ var obj = {};
   };
 
   return (
-    <div>
-      <Row gutter={40}>
+    <div
+    style={{  
+      backgroundImage: "url(" + fire + ")",
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'}}
+    >
+      <Row justify="space-around" gutter={40}>
         {data.map((card, i) => (
           <Col key={i}>
             <Card
               hoverable
-              style={{ width: 400, hight: 200, margin: "auto" }}
-              cover={<img alt="example" src={card.image} />}
+              style={{ width: 350, hight: 70, margin: "auto" }}
+              cover={<img alt="example" src={card.image} style={{height: '400', maxHeight: '400px',width: '350',maxWidth: '350px', }}/>}
             >
               <Meta title={card.Title} description={card.Desceription} />
               <label>Teacher name :</label>
@@ -124,8 +131,8 @@ var obj = {};
                     //   id: data[i]._id,
                     // });
                     checkRegistration();
-                  }}
-                >
+                  }}>
+                
                   Buy this course with just ${card.price}
                 </Button>
               </StripeCheckout>
