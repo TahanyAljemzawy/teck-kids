@@ -12,31 +12,31 @@ export default class Quiz extends Component {
     // initiating the local state
     state = {
         quiestions: {
-            1: 'What does CSS stand for?',
-            2: 'Where in an HTML document is the correct place to refer to an external style sheet?',
-            3: ' Which HTML tag is used to define an internal style sheet?'
+            1: 'Which of the following HTML Elements is used for making any text bold?',
+            2: 'Which of the following HTML element is used for creating an unordered list?',
+            3: 'Which of the following characters indicate closing of a tag?'
         },
         answers: {
             1: {
-                1: 'Computer Style Sheets',
-                2: 'Cascading Style Sheets',
-                3: 'Control Style Sheets'
+                1: '<p>',
+                2: ' <li>',
+                3: '<b>'
             },
             2: {
-                1: 'At the top of the document',
-                2: 'In the section',
-                3: 'At the end of the document'
+                1: '<ui>',
+                2: ' <ul>',
+                3: '<i>'
             },
             3: {
-                1: 'Style',
-                2: 'Css',
-                3: 'Script'
+                1: '!',
+                2: ' /',
+                3: ' |'
             }
         },
         correctAnswers: {
-            1: '1',
+            1: '3',
             2: '2',
-            3: '1'
+            3: '2'
         },
         correctAnswer: 0,
         clickedAnswer: 0,
@@ -137,7 +137,7 @@ WOHOOOOOO        </Button>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={()=>{history.push('/CSS/ex5')}}> Go to the Next exersise </Button>
+            <Button variant="primary" onClick={()=>{history.push('/ex9')}}> Go to the Next exersise </Button>
 
           </Modal.Footer>
         </Modal></div>:<div> <Button variant="primary" onClick={handleShow}>

@@ -137,7 +137,7 @@ WOHOOOOOO        </Button>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={()=>{history.push('/ex6CSS')}}> Go to the Next exersise </Button>
+            <Button variant="primary" onClick={()=>{history.push('/ex2CSS')}}> Go to the Next exersise </Button>
 
           </Modal.Footer>
         </Modal></div>:<div> <Button variant="primary" onClick={handleShow}>

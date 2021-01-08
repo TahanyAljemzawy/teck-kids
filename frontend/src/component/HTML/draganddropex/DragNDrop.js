@@ -109,7 +109,7 @@ function DragNDrop({data}) {
       <img src= "https://www.flaticon.com/svg/static/icons/svg/3159/3159066.svg" alt="css"/>
       <Modal.Footer>
         
-        <Button variant="primary" onClick={()=>{history.push('/ex3HTML')}}> Go to the Next exersise </Button>
+        <Button variant="primary" onClick={()=>{history.push('/ex4HTML')}}> Go to the Next exersise </Button>
       </Modal.Footer>
     </Modal></div>:<div>  
          <Button variant="primary" onClick={handleShow}> SUBMIT </Button>
