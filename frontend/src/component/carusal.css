@@ -1,17 +1,14 @@
 .pargraph{
     margin-bottom: 220px;
     margin-left: 100px;
-    border-style: inset;
     width: 700px;
-    background-color:gray;
     opacity: 0.7;
     padding: 60px;
 }
 .size{
-    height:700px;
-    width:2500px;
+    height:530px;
+    width:2300px;
 }
-
 .cssauth{
     margin-top: 100px;
     margin-left : 40em;
@@ -19,9 +16,175 @@
      height:30+"em";
      border-style:"solid";
      border-width:"10rem";
-     
 }
 .button1{
     margin-left:30px;
     color:black;
 }
+.hello {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    top: 25%;
+  }
+  .hello h3 {
+    position: relative;
+    font-size:medium;
+    font-family:cursive;
+    color:black;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 60px;
+    margin-left: 50px;
+    letter-spacing: 0.0625em;
+    width: calc(20ch + -100*0.0625em);
+  }
+  .hello h3:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: calc(20ch + 20*0.0625em);
+    height: 2ex;
+    left: 0;
+    top: 0;
+    background: #EFF5ED;
+    opacity: 0.4;
+    animation: 0.6s blink 20, move 3s 1.5s forwards steps(1);
+    border-left: 1px solid #152860;
+    box-shadow: 0px 1ex 0px 0px #7A7A7A;
+  }
+  @keyframes move {
+    5% {
+      width: calc( calc(10ch + 20*0.0625em) - (10ch + 10*0.0625em) );
+      left: calc(10ch + 1*0.0625em);
+    }
+    10% {
+      width: calc( calc(1ch + 20*0.0625em) - (2ch + 2*0.0625em) );
+      left: calc(2ch + 2*0.0625em);
+    }
+    15% {
+      width: calc( calc(20ch + 20*0.0625em) - (3ch + 3*0.0625em) );
+      left: calc(3ch + 3*0.0625em);
+    }
+    20% {
+      width: calc( calc(20ch + 20*0.0625em) - (4ch + 4*0.0625em) );
+      left: calc(4ch + 4*0.0625em);
+    }
+    25% {
+      width: calc( calc(20ch + 20*0.0625em) - (5ch + 5*0.0625em) );
+      left: calc(5ch + 5*0.0625em);
+    }
+    30% {
+      width: calc( calc(20ch + 20*0.0625em) - (6ch + 6*0.0625em) );
+      left: calc(6ch + 6*0.0625em);
+    }
+    35% {
+      width: calc( calc(20ch + 20*0.0625em) - (7ch + 7*0.0625em) );
+      left: calc(7ch + 7*0.0625em);
+    }
+    40% {
+      width: calc( calc(20ch + 20*0.0625em) - (8ch + 8*0.0625em) );
+      left: calc(8ch + 8*0.0625em);
+    }
+    45% {
+      width: calc( calc(20ch + 20*0.0625em) - (9ch + 9*0.0625em) );
+      left: calc(9ch + 9*0.0625em);
+    }
+    50% {
+      width: calc( calc(20ch + 20*0.0625em) - (10ch + 10*0.0625em) );
+      left: calc(10ch + 10*0.0625em);
+    }
+    55% {
+      width: calc( calc(20ch + 20*0.0625em) - (11ch + 11*0.0625em) );
+      left: calc(11ch + 11*0.0625em);
+    }
+    60% {
+      width: calc( calc(20ch + 20*0.0625em) - (12ch + 12*0.0625em) );
+      left: calc(12ch + 12*0.0625em);
+    }
+    65% {
+      width: calc( calc(20ch + 20*0.0625em) - (13ch + 13*0.0625em) );
+      left: calc(13ch + 13*0.0625em);
+    }
+    70% {
+      width: calc( calc(20ch + 20*0.0625em) - (14ch + 14*0.0625em) );
+      left: calc(14ch + 14*0.0625em);
+    }
+    75% {
+      width: calc( calc(20ch + 20*0.0625em) - (15ch + 15*0.0625em) );
+      left: calc(15ch + 15*0.0625em);
+    }
+    80% {
+      width: calc( calc(20ch + 20*0.0625em) - (16ch + 16*0.0625em) );
+      left: calc(16ch + 16*0.0625em);
+    }
+    85% {
+      width: calc( calc(20ch + 20*0.0625em) - (17ch + 17*0.0625em) );
+      left: calc(17ch + 17*0.0625em);
+    }
+    90% {
+      width: calc( calc(20ch + 20*0.0625em) - (18ch + 18*0.0625em) );
+      left: calc(18ch + 18*0.0625em);
+    }
+    95% {
+      width: calc( calc(20ch + 20*0.0625em) - (19ch + 19*0.0625em) );
+      left: calc(19ch + 19*0.0625em);
+    }
+    100% {
+      width: calc( calc(20ch + 20*0.0625em) - (20ch + 20*0.0625em) );
+      left: calc(20ch + 20*0.0625em);
+    }
+  }
+  @keyframes blink {
+    0% {
+      border-left-color: #152860;
+    }
+    50% {
+      border-left-color: #152860;
+    }
+    51% {
+      border-left-color: #EFF5ED;
+    }
+    100% {
+      border-left-color: #EFF5ED;
+    }
+  }
+.span1 {
+    display: inline-block;
+    text-shadow: 0 0 0 whitesmoke;
+    animation: smoky 5s 3s both;
+    color: black;
+    font-family: fantasy;
+    font-size: 20px;
+  }
+ .span1:nth-child(even){
+    animation-name: smoky-mirror;
+  }
+  @keyframes smoky {
+    60% {
+      text-shadow: 0 0 40px whitesmoke;
+    }
+    to {
+      transform:
+        translate3d(15rem,-8rem,0)
+        rotate(-40deg)
+        skewX(70deg)
+        scale(1.5);
+      text-shadow: 0 0 20px whitesmoke;
+      opacity: 0;
+    }
+  }
+  @keyframes smoky-mirror {
+    60% {
+      text-shadow: 0 0 40px whitesmoke; }
+    to {
+      transform:
+        translate3d(18rem,-8rem,0)
+        rotate(-40deg) 
+        skewX(-70deg)
+        scale(2);
+       /* text-shadow: 0 0 20px whitesmoke; */
+      opacity: 0;
+    }
+  }
