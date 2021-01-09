@@ -27,6 +27,7 @@ import io from "socket.io-client";
 
 import ChatroomPage from "./component/Pages/chatRoom";
 import './App.css'
+import Payment from './component/payment';
 // import DashboardPage from "./component/Pages/dashboard";
 // import io from "socket.io-client";
 // import ChatroomPage from "./component/Pages/chatRoom";
@@ -61,6 +62,7 @@ function App() {
           <Route path="/Chat" component={Chat} />
           <Route path="/Join" component={Join} />
           <Route exact path="/cchatroom" component={Chat} />
+          <Route exact path="/payment" component={Payment} />
           <Exercises />
         </Switch>
       </BrowserRouter>

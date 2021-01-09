@@ -5,11 +5,9 @@ import { Card } from "antd";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 import StripeCheckout from "react-stripe-checkout";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
-import { Row, Col, Divider, Statistic } from "antd";
-import { Rate } from "antd";
-import { LikeOutlined } from "@ant-design/icons";
+import { Row, Col } from "antd";
 import fire from "../pices/fire.jpg";
 
 /************************************************/
@@ -77,7 +75,10 @@ export default function CardDisplay() {
 
   const checkRegistration = async () => {
     console.log("checkRegistration ", obj);
-
+    if(userId === null ){  
+      toast("You are not logged in! ", { type: "error" });
+    history.push('/login')}
+  else
     try {
       const userInfo = await axios.get(
         "http://localhost:8000/user/account/" + userId
@@ -88,9 +89,9 @@ export default function CardDisplay() {
       for (var x = 0; x < userCourses.length; x++)
         if (userCourses[x] === obj.id) {
           toast("You are already registersd at this course", { type: "error" });
-          return true;
+          console.log("jjjj");
         } else {
-          return false;
+          console.log("nnnn");
         }
     } catch (error) {}
   };
@@ -130,38 +131,18 @@ export default function CardDisplay() {
               <span>{card.price}</span>
               <br />
 
-              <Button
-                onClick={() => {
-                  obj = {
-                    name: data[i].Title,
-                    price: data[i].price,
+              <Link  to={{    pathname: "/payment",  
+                state: { name: data[i].Title, 
+                   price: data[i].price,
                     productBy: data[i].Name,
-                    id: data[i]._id,
-                  };
-                  const state = checkRegistration();
-                  if (!state) handleShow3();
-                }}
-              >
-                Buy this course with just ${card.price}
-              </Button>
+                    id: data[i]._id,}  }}
+                    style={{fontSize:'1.2rem'}}
+                    onClick={checkRegistration}
+                    >
+                      Buy this course with just ${card.price}
+              </Link>
 
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Woohoo!!!!</Modal.Title>
-                </Modal.Header>
-                <img
-                  src="https://www.flaticon.com/svg/static/icons/svg/3159/3159066.svg"
-                  alt="css"
-                />
-                <Modal.Footer>
-                  <StripeCheckout
-                    stripeKey={process.env.REACT_APP_KEY}
-                    token={makePayment}
-                    name="Tick Kid"
-                    amount={obj.price * 100}
-                  />
-                </Modal.Footer>
-              </Modal>
+              
             </Card>
           </Col>
         ))}

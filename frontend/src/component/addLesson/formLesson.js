@@ -4,7 +4,7 @@ import axios from 'axios';
 import {Form , Button} from 'react-bootstrap'
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
-
+const queryString = require('query-string');
 /************************************************** */
 toast.configure();//for the notification
 
@@ -87,6 +87,30 @@ class Formlesson extends Component {
       
     }
    
+  }
+  onSubmit(e) {
+    e.preventDefault();
+    console.log('this is the id',queryString.parse(this.props.location.search));
+    const courseId = queryString.parse(this.props.location.search);
+    //declare an obj that holds all values after change
+    const task = {
+      title: this.state.title,
+      material: this.state.material,
+      description: this.state.description,
+      video: this.state.url,
+      role:localStorage.getItem('role'),
+      courseId:courseId.id
+    }
+    console.log('task before send',task);
+    axios.post('http://localhost:8000/materials/add', task) //create?
+      .then(res => { 
+        if (res.status === 200) 
+        toast("Success! New lesson is added ", { type: "success" });
+      else {
+          toast("Something went wrong :(", { type: "error" });
+        } });
+     
+  
   }
 
   onSubmit(e) {

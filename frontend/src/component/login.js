@@ -7,12 +7,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import { toast } from "react-toastify";
 
 
 //  import validate from "./component/validateLogin"
 // eslint-disable-next-line 
 /****************************************************************/
+toast.configure();
 const Signin = (validate)=>{
+
   const history = useHistory();
   //the values wich inserted by the user is stored at email and password using setEmail,setPasswword 
   const [ email        , setEmail    ]     = useState();
@@ -44,8 +47,10 @@ const Signin = (validate)=>{
       localStorage.setItem("role", loginRes.data.user.role);
       localStorage.setItem("Name", loginRes.data.user.name)
       history.push('/')
-      window.location.reload(false);
+      
        } catch (error) {
+        toast(error.response.data.msg , { type: "error" });
+       
       }
     }
   return(
