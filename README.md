@@ -3,9 +3,9 @@ This website is made for your kid, so he will take the first step to learn the b
 
 Team members
 
-scrum-master: Fatima,
- product owner: Tahany,
-  developers: Tojan, Rahmen, Eman
+scrum-master+dev: Eman,
+ product owner+dev: Tahany,
+  developers: Tojan, Rahmen
 
 
 Summary
