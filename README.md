@@ -1,5 +1,5 @@
-# teck-kids
-This website is made for your kid, so he will take the first step to learn the basics of web design.. can learn through descriptions, videos, lessons and exercises.
+<h1># teck-kids</h1>
+Educational webapp to learn programming for kids
 
 <h1>Team members</h1>
 <ul>
